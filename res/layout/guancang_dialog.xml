@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:minWidth="280dip"
+    android:layout_height="wrap_content">
+
+ 
+    <LinearLayout 
+        android:orientation="vertical"
+        android:background="@drawable/list_select"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+ 
+        <TextView
+            android:id="@+id/title_bookName"
+            style="@style/DialogText.Title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"           
+            />
+ 
+    </LinearLayout>
+ 
+    <LinearLayout 
+        android:id="@+id/content_dialog"
+        android:orientation="vertical"
+        android:background="@drawable/list_select"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+ 
+        <TextView
+            style="@style/DialogText"
+            android:id="@+id/message"
+          	android:textColor="@color/tomato"
+          	android:textSize="16sp"
+			android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/editText_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:hint="建议您加上自己的微信号"
+            
+            android:background="@drawable/skin_searchbar_input"
+             >
+        </EditText>
+
+    </LinearLayout>
+ 
+    <LinearLayout 
+         android:id="@+id/linearlayout_confirmOrDeny_dialog"
+        android:orientation="vertical"
+         android:background="@drawable/tabs_btn_bg_d"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+ 
+        <Button 
+            android:id="@+id/positiveButton"
+            android:background="@drawable/button_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+        
+        <Button 
+            android:id="@+id/negativeButton"
+            android:background="@drawable/button_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+        
+  </LinearLayout>
+ 
+</LinearLayout>

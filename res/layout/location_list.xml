@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F3F1DA"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/titlebar_big" >
+
+        <Button
+            android:id="@+id/imageview_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back_left"
+            android:text="返回"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/textview_post_weibo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:shadowColor="#ff000000"
+            android:shadowDx="2"
+            android:shadowDy="0"
+            android:shadowRadius="1"
+            android:text="搜索位置"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/back_right"
+            android:text="删除"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/skin_searchbar_bg"
+         android:layout_marginLeft="1dp"
+          android:layout_marginRight="1dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/text_search"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/skin_searchbar_input"
+            
+            android:hint="输入关键字搜索..."
+            android:singleLine="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/button_search"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:autoLink="all"
+            android:background="@drawable/search" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_page"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_btn_result_bg"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="6.0dip"
+            android:layout_marginRight="30dp"
+            
+            android:singleLine="true"
+            android:text="我在："
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/current_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="6.0dip"
+            android:textColor="@color/blue"
+            android:text="" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_locations"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@drawable/app_divider_h_gray"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" />
+
+</LinearLayout>

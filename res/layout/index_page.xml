@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MainActivity的布局文件 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget46"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/widget35"
+        android:background="@drawable/titlebar_big"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp" >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:shadowColor="#ff000000"
+            android:shadowDx="2"
+            android:shadowDy="0"
+            android:shadowRadius="1"
+            android:text="提醒"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/imageButton"
+            android:text="新建"
+            android:textColor="#ffffff"
+            android:background="@drawable/back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    
+    
+        <ExpandableListView
+            android:id="@+id/listView_lendBooks"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:childDivider="@drawable/app_divider_h_gray"
+           android:footerDividersEnabled="false"
+          
+            android:layout_gravity="center_horizontal"
+            android:divider="@android:color/transparent"
+             android:cacheColorHint="#00000000"
+            android:fadingEdgeLength="2.0dip"
+            android:listSelector="@android:color/transparent" />
+    
+    <!-- 支持手势操作 -->
+
+ 
+
+    <android.gesture.GestureOverlayView
+        android:id="@+id/gestureOverlayView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:eventsInterceptionEnabled="true"
+        android:gestureColor="#ffff00"
+        android:gestureStrokeType="multiple"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+                 android:cacheColorHint="#00000000"
+            android:divider="@android:color/transparent"
+            android:fadingEdgeLength="2.0dip"
+            android:listSelector="@android:color/transparent" />
+       
+    </android.gesture.GestureOverlayView>
+
+</LinearLayout>

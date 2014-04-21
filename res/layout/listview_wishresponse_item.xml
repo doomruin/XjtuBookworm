@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+         android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/button_delWishResponse"
+        >
+              
+        
+   
+ <TextView
+        android:id="@+id/textView_listview_wishresponse_bookName"
+         android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginBottom="5dp"
+        android:textColor="@color/gray"
+         />
+    <TextView
+        android:id="@+id/textView_listview_wishresponse_responserName"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+         />
+
+   
+
+    <TextView
+        android:id="@+id/textView_listview_wishresponse_msg"
+        android:layout_marginBottom="5dp"
+         android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+         />
+ </LinearLayout>
+ 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/error"
+        android:id="@+id/button_delWishResponse"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        >      
+    </Button>
+    
+    
+    
+    
+</RelativeLayout>

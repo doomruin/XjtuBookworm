@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/list_select"
+    android:orientation="vertical" >
+
+    
+    <include
+        android:id="@+id/head"
+        layout="@layout/searchactivity_head" />
+
+    <!-- 我的搜索页面 -->
+ 
+    <RelativeLayout
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skin_searchbar_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="4dp" >
+
+        <EditText
+            android:id="@+id/editText_search_bookname"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/framelayout_searchbook"
+            android:background="@drawable/skin_searchbar_input"
+            android:drawableLeft="@drawable/search"
+            android:ems="10"
+            android:hint="交大馆藏"
+            android:singleLine="true"
+            android:textColorHint="@color/gray" >
+        </EditText>
+<FrameLayout
+     android:id="@+id/framelayout_searchbook"
+       android:layout_alignParentRight="true"
+       android:layout_centerVertical="true"
+         android:layout_marginLeft="5dp"
+        android:layout_width="50dp"
+        android:layout_height="47dp" >
+        <Button
+            android:id="@+id/button_searchbook"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"                  
+            android:background="@drawable/perm_comment_button"
+            android:gravity="center"
+            android:text="搜索"
+            android:textSize="15dp" />
+           <ProgressBar
+                android:id="@+id/progressBar_searchbook_lib"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"                          
+                android:visibility="gone"
+                 />
+    </FrameLayout>
+        
+         </RelativeLayout>
+    
+   <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    
+
+        <RelativeLayout
+            android:id="@+id/bookRecommender"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager_ViewPagerActivity"
+                android:layout_alignParentTop="true"
+                android:layout_width="fill_parent"
+                android:layout_height="140dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                 >
+            </android.support.v4.view.ViewPager>
+
+            <ProgressBar
+                android:id="@+id/progressBar_recommendProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_below="@+id/viewPager_ViewPagerActivity"
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/transparent"
+                
+                android:max="100"
+                android:progressDrawable="@drawable/progress_recommend" />
+          
+            <ImageView 
+                 android:layout_below="@+id/progressBar_recommendProgress"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/wallpaper_searchactivity"
+                
+                />  
+                
+              
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+
+            <ListView
+                android:id="@+id/listView_book_searched"
+                android:layoutAnimation="@anim/layout_list_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/transparent"
+                android:layout_marginLeft="8dp"
+                 android:layout_marginRight="8dp"
+                android:dividerHeight="6dp"
+                android:fadingEdge="none"
+                android:listSelector="@drawable/list_selector" >
+            </ListView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/composer_buttons_wrapper_searchactivity"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:clipChildren="false"
+                android:clipToPadding="false" >
+
+                <ImageButton
+                    android:id="@+id/composer_button_photo_searchactivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="142dp"
+                    android:layout_marginRight="10.667dp"
+                    android:background="@drawable/composer_camera"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/composer_button_thought_searchactivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="122.975607dp"
+                    android:layout_marginRight="81.607dp"
+                    android:background="@drawable/composer_thought"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/composer_button_people_searchactivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="80.666666666666667dp"
+                    android:layout_marginRight="124.70765814495902dp"
+                    android:background="@drawable/composer_with"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/composer_button_place_searchactivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8.666666666666667dp"
+                    android:layout_marginRight="144dp"
+                    android:background="@drawable/composer_place"
+                    android:visibility="gone" />
+
+                
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/composer_buttons_show_hide_button_searchactivity"
+                android:layout_width="60dp"
+                android:layout_height="57.33333333333333dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/blue_cricle" >
+
+                <ImageView
+                    android:id="@+id/composer_buttons_show_hide_button_icon_searchactivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/composer_icn_plus" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/backgroundcolor"
+    android:id="@+id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical" >
+               
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >             
+        </FrameLayout>
+        
+    </LinearLayout>
+     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         >
+    <com.bookworm.scanbook.BigViewPager
+            	android:id="@+id/viewpager"
+            	android:layout_alignParentTop="true"
+            	android:layout_above="@android:id/tabs"
+            	android:layout_width="fill_parent"
+            	android:layout_height="fill_parent" />  
+ 	<TabWidget
+            android:id="@android:id/tabs"
+            
+          	android:scaleType="center"
+            android:background="@drawable/maintab_toolbar_bg"
+            android:layout_alignParentBottom="true"
+            android:layout_width="fill_parent"
+            android:layout_height="65dp" >
+        </TabWidget>
+        </RelativeLayout>
+</TabHost>

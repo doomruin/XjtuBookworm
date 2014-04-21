@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/file_list_bg"
+    android:paddingTop="10dp"
+    android:orientation="vertical" >
+
+    
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="@drawable/titlebar_big"
+     >
+    
+        <TextView
+            android:id="@+id/tv_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:shadowColor="#ff000000"
+            android:shadowDx="2"
+            android:shadowDy="0"
+            android:shadowRadius="1"
+            android:text="登陆"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+</RelativeLayout>
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+       
+        android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/mm_chat_listitem_normal"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/userNum"
+            style="@style/Image_EditText"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:drawableLeft="@drawable/usual_people"
+            android:hint="输入学工号"
+            android:paddingLeft="20.0dip" />
+
+        <LinearLayout style="@style/SolidLine" />
+
+        <EditText
+            android:id="@+id/userPass"
+            style="@style/Image_EditText"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:drawableLeft="@drawable/password"
+            android:hint="输入密码"
+            android:password="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dip"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <CheckBox
+            android:id="@+id/savePasswordCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="记住密码" >
+        </CheckBox>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg"
+            android:text="登陆"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_rewrite"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg"
+            android:text="重置"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="试用账号：3112370043"
+        android:layout_marginLeft="40dp" />
+     <TextView      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="密码：123456" />
+
+   </LinearLayout>
+
+</LinearLayout>

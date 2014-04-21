@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical" >
+    
+    
+    <include layout="@layout/searchactivity_head"/>
+    
+    
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+  
+    android:orientation="vertical" >
+<LinearLayout 
+	android:background="@color/white"
+    android:layout_marginTop="20dp"
+    android:paddingBottom="20dp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+<RadioGroup 
+    android:id="@+id/modeSelectGroup"
+    android:layout_width="wrap_content" 
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <RadioButton
+         android:id="@+id/modeSelect_radiobutton_server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="server" />
+    <RadioButton
+        android:id="@+id/modeSelect_radiobutton_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:textColor="@color/black"
+        android:text="local" />
+</RadioGroup>
+   
+    <TextView 
+         android:id="@+id/messageModeSelector_indicator"
+           android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+         />
+    
+     <ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="4dp"
+    android:src="@drawable/app_divider_h_gray" />
+   
+</LinearLayout>
+
+
+
+<LinearLayout 
+android:background="@color/white"
+    android:paddingTop="5dp"
+    android:layout_marginBottom="20dp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+<RadioGroup 
+    android:id="@+id/IsGetRecBookSelectGroup"
+    android:layout_width="wrap_content" 
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <RadioButton
+         android:id="@+id/radiobutton_IsGetRecBookSelect_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:textColor="@color/black"
+        android:text="推荐" />
+    <RadioButton
+        android:id="@+id/radiobutton_IsGetRecBookSelect_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:textColor="@color/black"
+        android:text="取消" />
+</RadioGroup>
+   
+    <TextView 
+         android:id="@+id/IsGetRecBookSelect_indicator"
+           android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+         />
+   
+    
+  
+</LinearLayout>
+
+
+<LinearLayout 
+     android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skin_searchbar_input"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+    >
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+       
+         >
+
+        <EditText
+            android:id="@+id/editText_setServerIP"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button_setIPConfirm"
+            android:background="@drawable/skin_searchbar_input"
+            
+            android:hint="Server IP"
+            android:singleLine="true"
+            
+            android:textColorHint="@color/gray" >
+        </EditText>
+
+        <Button
+            android:id="@+id/button_setIPConfirm"
+            android:layout_width="50dp"
+            android:layout_height="47dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/perm_comment_button"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="15dp" />
+    </RelativeLayout>
+<TextView
+    android:id="@+id/textview_serverIPIndicator"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="15dp"
+    android:textColor="@color/blue"
+    android:layout_marginTop="5dp"
+    />
+
+
+</LinearLayout>
+
+
+  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/skin_searchbar_input"
+ 		android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="请选择您的看书爱好" />
+        
+        <com.bookworm.searchbook.recommend.MultiSpinner 
+             android:layout_marginTop="20dp"
+            android:id="@+id/mySpinner_modeselect"
+             android:layout_width="fill_parent"
+             android:background="@drawable/skin_common_btn_spical_normal"
+        android:layout_height="wrap_content"
+            />
+        
+      <Button
+        android:id="@+id/btn_close_modeselector"
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/blackbutton_style"
+        android:text="返回" />
+    </LinearLayout>
+
+ </LinearLayout>
+</LinearLayout>

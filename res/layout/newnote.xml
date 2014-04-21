@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout_home"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/titlebar_big" >
+
+            <Button
+                android:id="@+id/imageview_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/back_left"
+                android:text="返回"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/textview_post_weibo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:shadowColor="#ff000000"
+                android:shadowDx="2"
+                android:shadowDy="0"
+                android:shadowRadius="1"
+                android:text="写笔记"
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/back_right"
+                android:text="发送"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <EditText
+                android:id="@+id/edittext_weibo_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#FFFF"
+                android:gravity="left|top"
+                android:hint="记下现在的感受..." />
+
+            <ImageView
+                android:id="@+id/imageview_insert_pic_min_viewer"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                
+                android:background="@drawable/book_page_bg1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/btn_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60.0dip"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/antiquewhite"
+                    android:clickable="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/book_titile"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="6.0dip"
+                        android:layout_marginRight="30dp"
+                       	android:textColor="@color/blue"
+                       	android:singleLine="true"
+                        android:text="书名"
+                        android:layout_toLeftOf="@+id/page_text_flag"
+                        android:layout_centerVertical="true"
+                        android:textSize="18dp"
+                         >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/page_text_flag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="6.0dip"
+                        android:layout_toLeftOf="@+id/page_edit"
+                        android:text="页码" />
+
+                    <EditText
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/page_edit"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="6.0dip"
+                        android:numeric="integer"
+                        android:singleLine="true" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_nearby"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60.0dip"
+                    android:background="#faf0e6"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/location_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="6.0dip"
+                        android:src="@drawable/main_location" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/location_pic"
+                        android:text="正在定位中..."
+                        android:textSize="16.0dip" />
+
+                    <ProgressBar
+                        android:id="@+id/getloc_progress"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true" 
+                        android:layout_toRightOf="@id/textView1"/>
+
+                        <TextView
+                            android:id="@+id/txtLocationName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20.0dip"
+                            android:layout_marginRight="5.0dip"
+                            android:layout_toRightOf="@id/textView1"
+                            android:singleLine="true" />
+
+                        <ImageView
+                            android:id="@+id/image2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@id/txtLocationName"
+                            android:src="@drawable/grayarrow" />
+                    
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <include layout="@layout/post_weibo_bottom" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout_input_board"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:background="#CCC"
+        android:visibility="gone" >
+
+        <include layout="@layout/face_list" />
+    </FrameLayout>
+
+</LinearLayout>
