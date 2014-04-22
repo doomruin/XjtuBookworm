@@ -10,7 +10,7 @@ import android.content.SharedPreferences;
 
 public class BookApplication extends Application {
 	
-	public static String ss="";
+	public static String ss="haha";
 	public static  String SERVER_IP = "";
 	//登录状态
 	public static String userNum = "";
